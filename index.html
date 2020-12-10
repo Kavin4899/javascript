@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="container py-5">
+        <h1 class="text-center text-white">Display Date to A Table</h1>
+
+        <form class="py-4 "name="myForm" onsubmit="return false" >
+            <div class="row ">
+              <div class="col-6">
+                <label class="text-white"  for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter Firstname" name="fname">
+                <span id="one" class="text-danger"></span>
+              </div>
+              <div class="col-6">
+                <label class="text-white" for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter lastname" name="lastname">
+                <span id="two" class="text-danger"></span>
+              </div>
+              <div class="col-6 mt-3">
+                <label class="text-white" for="age">Age</label>
+                <input type="text" class="form-control" id="age" placeholder="Enter Age" name="Age">
+                <span id="three" class="text-danger"></span>
+              </div>
+              <div class="col-3 py-3 mt-3">
+                <button type="submit" class="btn btn-primary mt-3 you" onclick="sub()">Submit</button>
+              </div>
+              <div class="col-3 py-3 mt-3">
+                <button type="Reset" class="btn btn-success mt-3 you">Reset</button>
+              </div>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+      
+      <table class="table table-bordered">
+        <thead>
+          <tr class="text-light bg-danger text-center">
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Ubdate/Delete</th>
+          </tr>
+        </thead>
+        <tr >
+          <tbody class="text-light text-center" id="bodyId"></tbody>
+        </tr>
+      </table>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
